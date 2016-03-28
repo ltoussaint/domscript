@@ -1,5 +1,7 @@
 # DomScript
 
+[Homepage](http://ltoussaint.github.io/domscript/)
+
 ## What is DomScript
 
 DomScript is a JavaScript framework which allow to manipulate easily DOM elements.  
