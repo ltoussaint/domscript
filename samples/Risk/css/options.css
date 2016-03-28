@@ -1,0 +1,110 @@
+#options {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: #DDD;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+#options.closed {
+    width: 50px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    animation-duration: 1.5s;
+    animation-name: closeOptions;
+}
+
+#options.opened {
+    height: 300px;
+    width: 180px;
+    line-height: 24px;
+    text-align: center;
+    animation-duration: 2.5s;
+    animation-name: openOptions;
+}
+
+@keyframes openOptions {
+    0% {
+        height: 24px;
+        width: 50px;
+        color: rgba(0, 0, 0, 0);
+    }
+
+    25% {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        color: #DDD;
+        height: 300px;
+        width: 180px;
+    }
+}
+
+@keyframes closeOptions {
+    0% {
+        height: 300px;
+        width: 180px;
+        color: rgba(0, 0, 0, 0);
+    }
+
+    25% {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        color: #DDD;
+        height: 24px;
+        width: 50px;
+    }
+}
+
+.optionToggle {
+    text-align: left;
+    display: flex;
+    height: 24px;
+    line-height: 24px;
+}
+
+.optionToggle input {
+    position: absolute;
+    left: -99em;
+    display: none;
+}
+
+.optionToggle .toggle {
+    margin: 4px 8px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    width: 36px;
+    height: 16px;
+    background-color: #c60208;
+    border-radius: 42px;
+    transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.optionToggle .toggle_button {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    top: -2px;
+    width: 16px;
+    height: 16px;
+    background-color: #eaeaea;
+    border-radius: 25px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+    transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform:  rotate(-45deg);
+}
+
+.optionToggle input:checked + .toggle {
+    background-color: #00ba2c;
+}
+.optionToggle input:checked + .toggle .toggle_button {
+    transform: translate3d(20px, 0, 0) rotate(0);
+}

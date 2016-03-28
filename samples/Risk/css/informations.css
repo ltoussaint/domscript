@@ -1,0 +1,22 @@
+#menuInfo {
+    padding: 4px;
+}
+
+#menuInfo .item .label {
+    display: inline-block;
+    width: 88px;
+    font-weight: bold;
+
+}#menuInfo .item .label.labelLong {
+     width: 160px;
+ }
+
+#menuInfo .item .value {
+    display: inline-block;
+}
+
+#menuInfo .item ul {
+    margin-left: 16px;
+    list-style: disc;
+    list-style-position: inside;
+}
